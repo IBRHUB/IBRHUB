@@ -1,4 +1,4 @@
-<h1 align="center">Hi 👋, I'm IBRAHIM</h1>
+<h1 align="center">Hi I'm IBRAHIM</h1>
 <h3 align="center">Interested in systems, improving gaming performance, and privacy in Windows</h3>
 
 - 🔭 I’m currently working on [Improving Windows performance and privacy ](https://ibrpride.com/)
