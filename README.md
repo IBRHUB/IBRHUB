@@ -9,3 +9,4 @@
 <a href="https://www.youtube.com/c/ibrpride" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/youtube.svg" alt="ibrpride" height="30" width="40" /></a>
 </p>
 
+[![](https://visitcount.itsvg.in/api?id=ibrpride&icon=0&color=0)](https://visitcount.itsvg.in)
