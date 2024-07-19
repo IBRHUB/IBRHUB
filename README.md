@@ -1,4 +1,4 @@
-<h1 align="center">IBRAHIM | Software Engineer & Systems Enthusiast</h1>
+<h1 align="center">IBRAHIM</h1>
 <h3 align="center">Passionate about optimizing gaming performance and enhancing privacy in Windows</h3>
 
 <p align="center">
@@ -9,17 +9,17 @@
 
 ### About Me
 
-I am IBRAHIM, a dedicated systems enthusiast with a strong focus on improving gaming performance and ensuring robust privacy measures in Windows environments. Although I am a software engineer, my passion lies in optimizing system configurations and enhancing user experience.
+I am IBRAHIM, a dedicated systems enthusiast with a strong focus on improving gaming performance and ensuring robust privacy measures in Windows environments. I specialize in optimizing system configurations and enhancing user experience.
 
 ### What I Do
 
-- **Performance Optimization:** I specialize in fine-tuning Windows systems to deliver optimal performance for gaming and other intensive applications.
+- **Performance Optimization:** Fine-tuning Windows systems for optimal gaming and application performance.
   
-- **Privacy Advocacy:** I am committed to implementing effective privacy strategies and tools to safeguard user data and enhance digital security.
+- **Privacy Advocacy:** Implementing effective strategies to safeguard user data and enhance digital security.
 
 ### Let's Collaborate
 
-I am open to collaboration opportunities in the fields of systems optimization, gaming technology, and privacy solutions. If you share similar interests or have innovative ideas to explore, let's connect and create something meaningful together.
+I am open to collaborations in systems optimization, gaming technology, and privacy solutions. Let's connect and create something meaningful together.
 
 ---
 
