@@ -211,7 +211,7 @@ def render(mode, stats):
     out = [
         '<svg xmlns="http://www.w3.org/2000/svg"',
         f' width="{svg_w}" height="{svg_h}" viewBox="0 0 {svg_w} {svg_h}"',
-        ' font-family="Consolas, Menlo, Monaco, \'Liberation Mono\', monospace"',
+        ' font-family="Consolas, Menlo, Monaco, \'Liberation Mono\', monospace">',
         f'<rect x="0.5" y="0.5" width="{svg_w - 1}" height="{svg_h - 1}" rx="10" fill="{p["bg"]}" stroke="{p["border"]}"/>',
     ]
     for i, line in enumerate(art):

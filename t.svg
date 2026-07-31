@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg"
  width="1177" height="803" viewBox="0 0 1177 803"
- font-family="Consolas, Menlo, Monaco, 'Liberation Mono', monospace">
+ font-family="Consolas, Menlo, Monaco, 'Liberation Mono', monospace"
 <rect x="0.5" y="0.5" width="1176" height="802" rx="10" fill="#0d1117" stroke="#30363d"/>
 <text x="22" y="37" font-size="11px" fill="#8b949e" xml:space="preserve">                                       +-=++=:</text>
 <text x="22" y="50" font-size="11px" fill="#8b949e" xml:space="preserve">                                     .-%@@@@@@#+=:</text>
@@ -73,6 +73,6 @@
 <text x="685" y="532" font-size="14px" xml:space="preserve"><tspan fill="#ffa657">Email: </tspan><tspan fill="#484f58">................................. </tspan><tspan fill="#c9d1d9">me@ibrhub.net</tspan></text>
 <text x="685" y="594" font-size="14px" xml:space="preserve"><tspan fill="#58a6ff">─ GitHub Stats </tspan><tspan fill="#484f58">───────────────────────────────────────</tspan></text>
 <text x="685" y="625" font-size="14px" xml:space="preserve"><tspan fill="#ffa657">Repos: </tspan><tspan fill="#484f58">.. </tspan><tspan fill="#c9d1d9">10 {Contributed: 1}</tspan><tspan fill="#484f58"> | </tspan><tspan fill="#ffa657">Stars: </tspan><tspan fill="#484f58">............. </tspan><tspan fill="#c9d1d9">1</tspan></text>
-<text x="685" y="656" font-size="14px" xml:space="preserve"><tspan fill="#ffa657">Commits: </tspan><tspan fill="#484f58">................. </tspan><tspan fill="#c9d1d9">88</tspan><tspan fill="#484f58"> | </tspan><tspan fill="#ffa657">Followers: </tspan><tspan fill="#484f58">......... </tspan><tspan fill="#c9d1d9">9</tspan></text>
-<text x="685" y="687" font-size="14px" xml:space="preserve"><tspan fill="#ffa657">Lines of Code: </tspan><tspan fill="#c9d1d9">464,329</tspan><tspan fill="#484f58"> ( </tspan><tspan fill="#3fb950">478,125++</tspan><tspan fill="#484f58">, </tspan><tspan fill="#f85149">13,796--</tspan><tspan fill="#484f58"> )</tspan></text>
+<text x="685" y="656" font-size="14px" xml:space="preserve"><tspan fill="#ffa657">Commits: </tspan><tspan fill="#484f58">................. </tspan><tspan fill="#c9d1d9">86</tspan><tspan fill="#484f58"> | </tspan><tspan fill="#ffa657">Followers: </tspan><tspan fill="#484f58">......... </tspan><tspan fill="#c9d1d9">9</tspan></text>
+<text x="685" y="687" font-size="14px" xml:space="preserve"><tspan fill="#ffa657">Lines of Code: </tspan><tspan fill="#c9d1d9">464,309</tspan><tspan fill="#484f58"> ( </tspan><tspan fill="#3fb950">477,941++</tspan><tspan fill="#484f58">, </tspan><tspan fill="#f85149">13,632--</tspan><tspan fill="#484f58"> )</tspan></text>
 </svg>
