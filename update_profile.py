@@ -26,7 +26,7 @@ ART_X = 22
 ART_Y0 = 37
 
 INFO_FONT = 14
-INFO_LINE = 31
+INFO_LINE = 37
 INFO_W = 54
 INFO_PAD_X = 24
 INFO_PAD_Y = 28
@@ -216,6 +216,9 @@ def render(mode, stats):
     panel_w = svg_w - PANEL_X - PANEL_RIGHT_MARGIN
     panel_h = svg_h - PANEL_Y - PANEL_BOTTOM_MARGIN
 
+    content_h = max(len(rows) - 1, 0) * INFO_LINE + INFO_FONT
+    content_y = PANEL_Y + (panel_h - content_h) / 2
+
     out = [
         '<svg xmlns="http://www.w3.org/2000/svg"',
         f' width="{svg_w}" height="{svg_h}" viewBox="0 0 {svg_w} {svg_h}"',
@@ -231,7 +234,7 @@ def render(mode, stats):
         spans = "".join(f'<tspan fill="{p[c]}">{html.escape(t)}</tspan>' for t, c in row)
         out.append(
             f'<text x="{info_x + INFO_PAD_X}" '
-            f'y="{box_y + INFO_PAD_Y + INFO_FONT + i * INFO_LINE}" '
+            f'y="{content_y + INFO_FONT + i * INFO_LINE}" '
             f'font-size="{INFO_FONT}px" '
             f'xml:space="preserve">{spans}</text>'
         )
