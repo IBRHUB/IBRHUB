@@ -239,7 +239,7 @@ def render(mode, stats):
     ]
     for i, line in enumerate(art):
         out.append(f'<text x="{ART_X}" y="{ART_Y0 + i * ART_LINE}" font-size="{ART_FONT}px" fill="{p["art"]}" xml:space="preserve">{html.escape(line)}</text>')
-    out.append(f'<rect x="{PANEL_X}" y="{PANEL_Y}" width="{panel_w}" height="{panel_h}" rx="8" fill="{p["bg"]}" stroke="{p["border"]}"/>')
+    out.append(f'<rect x="{PANEL_X}" y="{PANEL_Y}" width="{panel_w}" height="{panel_h}" rx="8" fill="{p["bg"]}" stroke="none"/>')
     for i, row in enumerate(rows):
         if not row:
             continue
