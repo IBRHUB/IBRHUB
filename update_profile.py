@@ -69,7 +69,7 @@ def fetch_stats():
     )
     contrib = graphql(f'query {{ user(login: "{USER}") {{ {yr_aliases} }} }}')["user"]
     commits = sum(
-        v["totalCommitContributions"] + v["restrictedContributionsCount"]
+        v["totalCommitContributions"]
         for v in contrib.values()
     )
     u = graphql(f"""
@@ -77,7 +77,7 @@ def fetch_stats():
       user(login: "{USER}") {{
         id
         followers {{ totalCount }}
-        repositories(first: 100, ownerAffiliations: OWNER) {{
+        repositories(first: 100, ownerAffiliations: OWNER, privacy: PUBLIC) {{
           totalCount
           nodes {{ name stargazerCount isFork }}
         }}
