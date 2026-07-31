@@ -17,7 +17,11 @@ HOST = "IBRHUB"
 KERNEL = "Windows NT 10.0 (WSL2: Linux)"
 SHELL = "PowerShell 7, Bash"
 IDE = "Neovim, Cursor"
-LANG_PROG = "PowerShell, C#, C++, C"
+LANG_PROG = [
+    "Python, Dart, C++, C#",
+    "TypeScript, JavaScript, PHP, C",
+    "PowerShell, Batchfile",
+]
 LANG_SPOKEN = "Arabic, English"
 MARKUP = "YAML, JSON"
 HOBBIES = "Windows Tuning"
@@ -28,7 +32,7 @@ ART_X = 22
 ART_Y0 = 37
 
 INFO_FONT = 14
-INFO_LINE = 33
+INFO_LINE = 30
 INFO_W = 54
 INFO_PAD_X = 24
 INFO_PAD_Y = 28
@@ -170,7 +174,7 @@ def rule(title=""):
 def info_lines(s):
     y, m, d = age(START, date.today())
     n = lambda x: f"{x:,}"
-    return [
+    lines = [
         [(f"{USER.lower()}@github ", "h"), ("─" * (INFO_W - len(USER) - 8), "d")],
         [],
         kv("OS", "Windows, Linux"),
@@ -180,7 +184,10 @@ def info_lines(s):
         kv("Shell", SHELL),
         kv("Editors", IDE),
         [],
-        kv("Languages.Programming", LANG_PROG),
+    ]
+    for lang_line in LANG_PROG:
+        lines.append(kv("Languages.Programming", lang_line))
+    lines += [
         kv("Languages.Spoken", LANG_SPOKEN),
         kv("Markup", MARKUP),
         kv("Hobbies", HOBBIES),
@@ -194,6 +201,7 @@ def info_lines(s):
         [("Lines of Code: ", "k"), (n(s["loc"]), "v"), (" ( ", "d"),
          (n(s["loc_add"]) + "++", "g"), (", ", "d"), (n(s["loc_del"]) + "--", "r"), (" )", "d")],
     ]
+    return lines
 
 
 def render(mode, stats):
