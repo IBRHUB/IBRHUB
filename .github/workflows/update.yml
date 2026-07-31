@@ -1,6 +1,9 @@
 name: Update profile stats
 
 on:
+  push:
+    branches:
+      - main
   schedule:
     - cron: "17 4 * * *"
   workflow_dispatch:
