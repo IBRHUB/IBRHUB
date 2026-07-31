@@ -14,10 +14,12 @@ START = date(2009, 1, 7)
 JOINED_YEAR = 2022  # account creation year, for contributions history
 EMAIL = "me@ibrhub.net"
 HOST = "IBRHUB"
-KERNEL = "Windows & Web Developer"
+KERNEL = "Windows NT 10.0 (WSL2: Linux)"
+SHELL = "PowerShell 7, Bash"
 IDE = "Neovim, Cursor"
-LANG_PROG = "PowerShell, C#, C++, C, YAML"
-LANG_REAL = "Arabic, English"
+LANG_PROG = "PowerShell, C#, C++, C"
+LANG_SPOKEN = "Arabic, English"
+MARKUP = "YAML, JSON"
 HOBBIES = "Windows Tuning"
 
 ART_FONT = 11
@@ -26,7 +28,7 @@ ART_X = 22
 ART_Y0 = 37
 
 INFO_FONT = 14
-INFO_LINE = 37
+INFO_LINE = 33
 INFO_W = 54
 INFO_PAD_X = 24
 INFO_PAD_Y = 28
@@ -175,10 +177,12 @@ def info_lines(s):
         kv("Uptime", f"{y} years, {m} months (since {START.year})"),
         kv("Host", HOST),
         kv("Kernel", KERNEL),
-        kv("IDE", IDE),
+        kv("Shell", SHELL),
+        kv("Editors", IDE),
         [],
         kv("Languages.Programming", LANG_PROG),
-        kv("Languages.Real", LANG_REAL),
+        kv("Languages.Spoken", LANG_SPOKEN),
+        kv("Markup", MARKUP),
         kv("Hobbies", HOBBIES),
         [],
         rule("Contact"),
