@@ -10,7 +10,8 @@ import urllib.request
 from datetime import date, datetime, timezone
 
 USER = "IBRHUB"
-JOINED = date(2022, 3, 23)
+START = date(2009, 1, 7)
+JOINED_YEAR = 2022  # account creation year, for contributions history
 EMAIL = "me@ibrhub.net"
 HOST = "IBRHUB"
 KERNEL = "Windows & Web Developer"
@@ -65,7 +66,7 @@ def fetch_stats():
     yr_aliases = "\n".join(
         f'y{y}: contributionsCollection(from: "{y}-01-01T00:00:00Z", to: "{y + 1}-01-01T00:00:00Z")'
         " { totalCommitContributions restrictedContributionsCount }"
-        for y in range(JOINED.year, datetime.now(timezone.utc).year + 1)
+        for y in range(JOINED_YEAR, datetime.now(timezone.utc).year + 1)
     )
     contrib = graphql(f'query {{ user(login: "{USER}") {{ {yr_aliases} }} }}')["user"]
     commits = sum(
@@ -153,13 +154,13 @@ def rule(title=""):
 
 
 def info_lines(s):
-    y, m, d = age(JOINED, date.today())
+    y, m, d = age(START, date.today())
     n = lambda x: f"{x:,}"
     return [
         [(f"{USER.lower()}@github ", "h"), ("─" * (INFO_W - len(USER) - 8), "d")],
         [],
         kv("OS", "Windows, Linux"),
-        kv("Uptime", f"{y} years, {m} months (since {JOINED.year})"),
+        kv("Uptime", f"{y} years, {m} months (since {START.year})"),
         kv("Host", HOST),
         kv("Kernel", KERNEL),
         kv("IDE", IDE),
