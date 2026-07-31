@@ -35,6 +35,11 @@ PANEL_GAP = 32
 ART_CHAR_W = 0.60 * ART_FONT
 INFO_CHAR_W = 0.60 * INFO_FONT
 
+PANEL_X = 597
+PANEL_Y = 21
+PANEL_RIGHT_MARGIN = 17
+PANEL_BOTTOM_MARGIN = 37
+
 with open(os.path.join(os.path.dirname(os.path.abspath(__file__)), "ascii.txt"), encoding="utf-8") as f:
     ART = f.read().replace("\r\n", "\n").strip("\n")
 
@@ -208,6 +213,9 @@ def render(mode, stats):
 
     box_y = max((svg_h - box_h) // 2, 15)
 
+    panel_w = svg_w - PANEL_X - PANEL_RIGHT_MARGIN
+    panel_h = svg_h - PANEL_Y - PANEL_BOTTOM_MARGIN
+
     out = [
         '<svg xmlns="http://www.w3.org/2000/svg"',
         f' width="{svg_w}" height="{svg_h}" viewBox="0 0 {svg_w} {svg_h}"',
@@ -216,7 +224,7 @@ def render(mode, stats):
     ]
     for i, line in enumerate(art):
         out.append(f'<text x="{ART_X}" y="{ART_Y0 + i * ART_LINE}" font-size="{ART_FONT}px" fill="{p["art"]}" xml:space="preserve">{html.escape(line)}</text>')
-    out.append(f'<rect x="{info_x}" y="{box_y}" width="{box_w}" height="{box_h}" rx="8" fill="{p["bg"]}" stroke="{p["border"]}"/>')
+    out.append(f'<rect x="{PANEL_X}" y="{PANEL_Y}" width="{panel_w}" height="{panel_h}" rx="8" fill="{p["bg"]}" stroke="{p["border"]}"/>')
     for i, row in enumerate(rows):
         if not row:
             continue
