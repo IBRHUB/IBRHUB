@@ -24,9 +24,16 @@ ART_FONT = 11
 ART_LINE = 13
 ART_X = 22
 ART_Y0 = 37
+
+INFO_FONT = 14
+INFO_LINE = 31
 INFO_W = 54
-INFO_SPACING = 28
-CHAR_W = 0.6 * ART_FONT
+INFO_PAD_X = 24
+INFO_PAD_Y = 28
+PANEL_GAP = 32
+
+ART_CHAR_W = 0.60 * ART_FONT
+INFO_CHAR_W = 0.60 * INFO_FONT
 
 with open(os.path.join(os.path.dirname(os.path.abspath(__file__)), "ascii.txt"), encoding="utf-8") as f:
     ART = f.read().replace("\r\n", "\n").strip("\n")
@@ -183,29 +190,43 @@ def info_lines(s):
 def render(mode, stats):
     p = PALETTES[mode]
     art = ART.split("\n")
-    art_w = max(len(l) for l in art) * CHAR_W
-    info_x = 680
-    box_w = int(INFO_W * CHAR_W + 36)
-    svg_w = int(info_x + box_w + 15)
-    svg_h = ART_Y0 + len(art) * ART_LINE + 25
     rows = info_lines(stats)
-    box_h = len(rows) * INFO_SPACING + 48
-    box_y = (svg_h - box_h) // 2
+
+    art_w = max(len(line) for line in art) * ART_CHAR_W
+    info_x = int(ART_X + art_w + PANEL_GAP)
+    box_w = int(INFO_W * INFO_CHAR_W + INFO_PAD_X * 2)
+
+    box_h = int(
+        INFO_PAD_Y * 2
+        + max(len(rows) - 1, 0) * INFO_LINE
+        + INFO_FONT
+    )
+
+    art_h = ART_Y0 + len(art) * ART_LINE + 25
+    svg_h = max(art_h, box_h + 40)
+    svg_w = int(info_x + box_w + 15)
+
+    box_y = max((svg_h - box_h) // 2, 15)
+
     out = [
         '<svg xmlns="http://www.w3.org/2000/svg"',
         f' width="{svg_w}" height="{svg_h}" viewBox="0 0 {svg_w} {svg_h}"',
         ' font-family="Consolas, Menlo, Monaco, \'Liberation Mono\', monospace"',
-        f' font-size="{ART_FONT}px">',
         f'<rect x="0.5" y="0.5" width="{svg_w - 1}" height="{svg_h - 1}" rx="10" fill="{p["bg"]}" stroke="{p["border"]}"/>',
     ]
     for i, line in enumerate(art):
-        out.append(f'<text x="{ART_X}" y="{ART_Y0 + i * ART_LINE}" fill="{p["art"]}" xml:space="preserve">{html.escape(line)}</text>')
+        out.append(f'<text x="{ART_X}" y="{ART_Y0 + i * ART_LINE}" font-size="{ART_FONT}px" fill="{p["art"]}" xml:space="preserve">{html.escape(line)}</text>')
     out.append(f'<rect x="{info_x}" y="{box_y}" width="{box_w}" height="{box_h}" rx="8" fill="{p["bg"]}" stroke="{p["border"]}"/>')
     for i, row in enumerate(rows):
         if not row:
             continue
         spans = "".join(f'<tspan fill="{p[c]}">{html.escape(t)}</tspan>' for t, c in row)
-        out.append(f'<text x="{info_x + 18}" y="{box_y + 40 + i * INFO_SPACING}" xml:space="preserve">{spans}</text>')
+        out.append(
+            f'<text x="{info_x + INFO_PAD_X}" '
+            f'y="{box_y + INFO_PAD_Y + INFO_FONT + i * INFO_LINE}" '
+            f'font-size="{INFO_FONT}px" '
+            f'xml:space="preserve">{spans}</text>'
+        )
     out.append("</svg>")
     return "\n".join(out)
 
