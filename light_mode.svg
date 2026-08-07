@@ -62,7 +62,7 @@
 <rect x="597" y="21" width="563" height="745" rx="8" fill="#ffffff" stroke="none"/>
 <text x="685" y="70.5" font-size="14px" xml:space="preserve"><tspan fill="#0969da">ibrhub@github </tspan><tspan fill="#afb8c1">────────────────────────────────────────</tspan></text>
 <text x="685" y="130.5" font-size="14px" xml:space="preserve"><tspan fill="#953800">OS: </tspan><tspan fill="#afb8c1">................................... </tspan><tspan fill="#24292f">Windows, Linux</tspan></text>
-<text x="685" y="160.5" font-size="14px" xml:space="preserve"><tspan fill="#953800">Uptime: </tspan><tspan fill="#afb8c1">.............. </tspan><tspan fill="#24292f">17 years, 6 months (since 2009)</tspan></text>
+<text x="685" y="160.5" font-size="14px" xml:space="preserve"><tspan fill="#953800">Uptime: </tspan><tspan fill="#afb8c1">.............. </tspan><tspan fill="#24292f">17 years, 7 months (since 2009)</tspan></text>
 <text x="685" y="190.5" font-size="14px" xml:space="preserve"><tspan fill="#953800">Host: </tspan><tspan fill="#afb8c1">......................................... </tspan><tspan fill="#24292f">IBRHUB</tspan></text>
 <text x="685" y="220.5" font-size="14px" xml:space="preserve"><tspan fill="#953800">Kernel: </tspan><tspan fill="#afb8c1">................ </tspan><tspan fill="#24292f">Windows NT 10.0 (WSL2: Linux)</tspan></text>
 <text x="685" y="250.5" font-size="14px" xml:space="preserve"><tspan fill="#953800">Shell: </tspan><tspan fill="#afb8c1">............................ </tspan><tspan fill="#24292f">PowerShell 7, Bash</tspan></text>
