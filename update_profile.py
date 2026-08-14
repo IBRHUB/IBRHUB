@@ -1,7 +1,3 @@
-"""Regenerate dark_mode.svg / light_mode.svg with live GitHub stats.
-
-Runs daily via GitHub Actions. Stdlib only, no dependencies.
-"""
 import calendar
 import html
 import json
