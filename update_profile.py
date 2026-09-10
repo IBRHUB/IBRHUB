@@ -7,7 +7,6 @@ from datetime import date, datetime, timezone
 
 USER = "IBRHUB"
 START = date(2009, 1, 7)
-JOINED_YEAR = 2022  # account creation year, for contributions history
 EMAIL = "me@ibrhub.net"
 HOST = "IBRHUB"
 KERNEL = "Windows NT 10.0 (WSL2: Linux)"
